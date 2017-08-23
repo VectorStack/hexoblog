@@ -1,135 +1,62 @@
 ---
-title: Hello World
+title: Hexo + Github Pages 搭建个人博客
 toc: true
 tag:
+- Node.js
+- git
 - hexo
 - yilia
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+<img src="/assets/blogImg/hexo-blog.jpg" width="50%" > 
 
 
 <!--more-->
 
-## Quick Start
+## 系统环境配置
 
-### Create a new post
+### 安装Node.js
 
-``` bash
-$ hexo new "My New Post"
-```
+<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="external">下载Node.js</a>
+参考地址：<a href="http://www.w3cschool.cc/nodejs/nodejs-install-setup.html" target="_blank" rel="external">安装Node.js</a>
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+### 安装git
 
-### Run server
+[下载git](https://git-scm.com/downloads)
+参考地址：[安装git](https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git)
 
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
+### 安装hexo
 
 ``` bash
-$ hexo generate
+$ cd d:/project/hexo   #进入文件夹
+$ npm install hexo-cli -g   #全局安装hexo-cli模块
+$ hexo init blog       #初始化hexo工程
+$ cd blog              #进入生成的blog工程
+$ npm install          #npm 安装package.json中的dependencies
+$ hexo g  # 或者hexo generate 生成静态页面
+$ hexo s  # 或者hexo server, 启动服务,浏览器输入网址http://localhost:4000/即可查看　
 ```
 
-More info: [Generating](https://hexo.io/docs/generating.html)
+显示页面如下，则安装成功
 
-### Deploy to remote sites
+<img src="/assets/blogImg/hexo-blog-1.png" width="50%" > 
+
+注意：如果输入网址后没有响应,则可能4000端口占用,可使用以下命令切换端口
+``` bash
+$ hexo server -p 4001 #-p p指port,4001是新的端口
+```
+
+##  编写博客
+
+新建博客
 
 ``` bash
-$ hexo deploy
+#不要关闭服务控制台,新开控制台
+$ cd d:/project/hexo/blog  #进入blog工程
+$ hexo new "postName" #新建文章,"postName"是文章标题,可任意修改
+#新建成功会在source\_posts新生成postName.md文件
 ```
 
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+打开postName.md文件，即可使用[Markdown](https://markdown-zh.readthedocs.io/en/latest/overview/)语法写博客啦！
+刷新页面可查看文章哦！
 
-``` bash
-$ hexo new "My New Post"
-```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/deployment.html)
-
-``` bash
-$ hexo new "My New Post"
-```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/deployment.html)
-
-``` bash
-$ hexo new "My New Post"
-```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+## 部署
