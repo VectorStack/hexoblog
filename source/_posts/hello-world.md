@@ -61,4 +61,5 @@ $ hexo new "postName" #新建文章,"postName"是文章标题,可任意修改
 
 ## 部署
 ``` bash
+$ 
 ```
