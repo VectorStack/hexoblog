@@ -60,6 +60,22 @@ $ hexo new "postName" #新建文章,"postName"是文章标题,可任意修改
 刷新页面可查看文章哦！
 
 ## 部署
-``` bash
-$ 
+
+在github上新建Repository
+建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】，固定写法
+修改_config.yml
+翻到最下面，改成我这样子的
+
+```bash
+deploy:
+     type: git
+     repo: git@github.com:vectorstack/vectorstack.github.io.git
+     branch: master
+```
+
+然后执行命令：
+```bash
+$ npm install hexo-deployer-git --save #安装模块
+$ hexo generate  #生成静态页面
+$ hexo deploy #部署到github上
 ```
