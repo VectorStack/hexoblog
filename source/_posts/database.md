@@ -1,5 +1,5 @@
 ---
-title: my new post
+title: mongoDB 安装
 date: 2017-08-22 09:53:41
 tags:
 ---
